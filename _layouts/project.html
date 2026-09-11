@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<article class="wrap record">
+  <a class="back" href="{{ '/' | relative_url }}">&larr; All entries</a>
+
+  <header class="record-head">
+    <h1>{{ page.name }}</h1>
+    {% if page.organization %}<p class="record-org">{{ page.organization }}</p>{% endif %}
+
+    {% assign poc = page.poc %}
+    {% if poc %}
+      <p class="record-poc">
+        <span class="poc-label">Point of contact</span>
+        {% if poc.name %}
+          {{ poc.name }}{% if poc.role %} <span class="muted">({{ poc.role }})</span>{% endif %}{% if poc.email %} &middot; <a href="mailto:{{ poc.email }}">{{ poc.email }}</a>{% endif %}
+        {% else %}
+          {{ poc }}
+        {% endif %}
+      </p>
+    {% endif %}
+
+    <ul class="tags">
+      {% if page.mcp_type %}<li class="tag tag-type">{{ page.mcp_type }}</li>{% endif %}
+      {% if page.resource %}<li class="tag tag-resource">{{ page.resource }}</li>{% endif %}
+      {% if page.status %}<li class="tag tag-status" data-status="{{ page.status | downcase }}">{{ page.status }}</li>{% endif %}
+    </ul>
+  </header>
+
+  {% if page.overview or page.summary %}
+  <section class="record-section">
+    <h2>Overview</h2>
+    {{ page.overview | default: page.summary | markdownify }}
+  </section>
+  {% endif %}
+
+  {% if page.capabilities %}
+  <section class="record-section">
+    <h2>MCP capabilities</h2>
+    <ul class="record-list">
+      {% for c in page.capabilities %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.resources_exposed %}
+  <section class="record-section">
+    <h2>Resources exposed</h2>
+    <ul class="record-list">
+      {% for r in page.resources_exposed %}<li>{{ r }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.architecture %}
+  <section class="record-section">
+    <h2>Architecture &amp; technology</h2>
+    {{ page.architecture | markdownify }}
+  </section>
+  {% endif %}
+
+  {% if page.status_detail %}
+  <section class="record-section">
+    <h2>Status</h2>
+    {{ page.status_detail | markdownify }}
+  </section>
+  {% endif %}
+
+  {% if page.evidence %}
+  <section class="record-section">
+    <h2>Evidence &amp; documentation</h2>
+    <ul class="record-list evidence">
+      {% for e in page.evidence %}
+        <li>
+          {% if e.url %}<a href="{{ e.url }}" rel="noopener">{{ e.label | default: e.url }}</a>
+          {% else %}{{ e.label | default: e }}{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <dl class="record-meta">
+    {% if page.last_verified %}<div><dt>Last verified</dt><dd>{{ page.last_verified }}</dd></div>{% endif %}
+    {% if page.organization %}<div><dt>Organization</dt><dd>{{ page.organization }}</dd></div>{% endif %}
+    {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
+  </dl>
+</article>

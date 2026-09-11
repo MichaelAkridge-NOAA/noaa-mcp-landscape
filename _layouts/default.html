@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body>
+  {% include masthead.html %}
+  <main>
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>
+        {{ site.title }} — an open, community-maintained survey.
+        Entries are contributed and may be incomplete; check each record's
+        evidence and “last verified” date.
+      </p>
+      <p class="footer-links">
+        <a href="{{ '/docs/contribute/' | relative_url }}">Contribute</a>
+        <a href="{{ site.repo_url | default: '#' }}">Source</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

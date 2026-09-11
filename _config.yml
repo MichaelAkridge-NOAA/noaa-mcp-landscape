@@ -1,0 +1,63 @@
+title: NOAA MCP Landscape
+description: >-
+  Mapping Model Context Protocol (MCP) experimentation and implementation
+  across NOAA and its partners.
+tagline: Mapping MCP experimentation and implementation across NOAA and its partners.
+
+# --- GitHub Pages deployment -------------------------------------------------
+# If this repo is served at https://<org>.github.io/noaa-mcp-landscape/
+# leave baseurl set to the repo name (with a leading slash, no trailing slash).
+# If you serve it from a custom domain or a <org>.github.io root repo, set
+# baseurl to an empty string: baseurl: ""
+baseurl: "/noaa-mcp-landscape"
+url: ""
+
+# Set this to the GitHub repository URL once created. Used for the
+# "Add an entry" / issue-form links and the footer "Source" link.
+repo_url: "https://github.com/ORG/noaa-mcp-landscape"
+
+# --- Entries as a collection -------------------------------------------------
+# Each file in _projects/ becomes its own page at /project/<id>/, where <id>
+# is the filename. output: true is what generates the per-entry pages.
+collections:
+  projects:
+    output: true
+    permalink: /project/:path/
+
+# Give every entry the project layout so contributors don't have to declare it.
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+# --- Build -------------------------------------------------------------------
+markdown: kramdown
+exclude:
+  - README.md
+  - PROJECT_TEMPLATE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Controlled vocabularies. The contribute page and the filters read from these.
+vocab:
+  status:
+    - concept
+    - prototype
+    - pilot
+    - production
+    - archived
+  mcp_type:
+    - server
+    - client
+    - host
+    - both
+  resource:
+    - data access
+    - knowledge management
+    - tooling
+    - workflow
+    - modeling
+    - other

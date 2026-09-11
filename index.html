@@ -1,0 +1,72 @@
+---
+layout: default
+title: null
+---
+<section class="hero wrap">
+  <p class="eyebrow">Field survey · {{ site.projects | size }} entries</p>
+  <h1 class="hero-title">NOAA MCP Landscape</h1>
+  <p class="hero-lede">{{ site.tagline }}</p>
+</section>
+
+<section class="controls wrap" aria-label="Search and filter the registry">
+  <div class="search">
+    <label class="visually-hidden" for="q">Search entries</label>
+    <input id="q" type="search" placeholder="Search entries — name, organization, capability…" autocomplete="off">
+  </div>
+  <div class="filters" role="group" aria-label="Filters">
+    <label class="filter">
+      <span>Organization</span>
+      <select id="f-org" data-key="org"><option value="">All</option></select>
+    </label>
+    <label class="filter">
+      <span>Status</span>
+      <select id="f-status" data-key="status"><option value="">All</option></select>
+    </label>
+    <label class="filter">
+      <span>MCP type</span>
+      <select id="f-type" data-key="type"><option value="">All</option></select>
+    </label>
+    <label class="filter">
+      <span>Resource</span>
+      <select id="f-resource" data-key="resource"><option value="">All</option></select>
+    </label>
+    <button id="reset" type="button" class="reset" hidden>Clear filters</button>
+  </div>
+</section>
+
+<section class="wrap register-head" aria-hidden="true">
+  <span class="count"><span id="shown">{{ site.projects | size }}</span> shown</span>
+</section>
+
+<ol class="register wrap" id="register">
+  {% assign items = site.projects | sort: 'name' %}
+  {% for p in items %}
+    <li class="entry"
+        data-name="{{ p.name | downcase }}"
+        data-org="{{ p.organization | escape }}"
+        data-status="{{ p.status | downcase }}"
+        data-type="{{ p.mcp_type | downcase }}"
+        data-resource="{{ p.resource | downcase }}"
+        data-search="{{ p.name | append: ' ' | append: p.organization | append: ' ' | append: p.summary | append: ' ' | append: p.resource | downcase | escape }}">
+      <a class="entry-link" href="{{ p.url | relative_url }}">
+        <div class="entry-main">
+          <h2 class="entry-name">{{ p.name }}</h2>
+          <p class="entry-org">{{ p.organization }}</p>
+          <p class="entry-summary">{{ p.summary }}</p>
+        </div>
+        <ul class="tags" aria-label="Attributes">
+          {% if p.mcp_type %}<li class="tag tag-type">{{ p.mcp_type }}</li>{% endif %}
+          {% if p.resource %}<li class="tag tag-resource">{{ p.resource }}</li>{% endif %}
+          {% if p.status %}<li class="tag tag-status" data-status="{{ p.status | downcase }}">{{ p.status }}</li>{% endif %}
+        </ul>
+      </a>
+    </li>
+  {% endfor %}
+</ol>
+
+<p class="empty wrap" id="empty" hidden>
+  No entries match those filters. <button type="button" id="empty-reset" class="linklike">Clear filters</button>
+  or <a href="{{ '/docs/contribute/' | relative_url }}">add a missing one</a>.
+</p>
+
+<script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
