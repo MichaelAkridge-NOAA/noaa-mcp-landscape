@@ -10,7 +10,7 @@ tagline: Mapping MCP experimentation and implementation across NOAA and its part
 # If you serve it from a custom domain or a <org>.github.io root repo, set
 # baseurl to an empty string: baseurl: ""
 baseurl: "/noaa-mcp-landscape"
-url: ""
+url: "https://github.com/jmote-noaa/noaa-mcp-landscape"
 
 # Set this to the GitHub repository URL once created. Used for the
 # "Add an entry" / issue-form links and the footer "Source" link.
