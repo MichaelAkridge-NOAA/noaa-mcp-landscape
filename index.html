@@ -30,6 +30,10 @@ title: null
       <span>Resource</span>
       <select id="f-resource" data-key="resource"><option value="">All</option></select>
     </label>
+    <label class="filter">
+      <span>Internal/External</span>
+      <select id="f-external" data-key="external"><option value="">All</option></select>
+    </label>
     <button id="reset" type="button" class="reset" hidden>Clear filters</button>
   </div>
 </section>
@@ -47,7 +51,8 @@ title: null
         data-status="{{ p.status | downcase }}"
         data-type="{{ p.mcp_type | downcase }}"
         data-resource="{{ p.resource | downcase }}"
-        data-search="{{ p.name | append: ' ' | append: p.organization | append: ' ' | append: p.summary | append: ' ' | append: p.resource | downcase | escape }}">
+        data-external="{{ p.affiliation }}"
+        data-search="{{ p.name | append: ' ' | append: p.organization | append: ' ' | append: p.summary | append: ' ' | append: p.resource | append: ' ' | append: p.affiliation | downcase | escape }}">
       <a class="entry-link" href="{{ p.url | relative_url }}">
         <div class="entry-main">
           <h2 class="entry-name">{{ p.name }}</h2>
@@ -58,6 +63,7 @@ title: null
           {% if p.mcp_type %}<li class="tag tag-type">{{ p.mcp_type }}</li>{% endif %}
           {% if p.resource %}<li class="tag tag-resource">{{ p.resource }}</li>{% endif %}
           {% if p.status %}<li class="tag tag-status" data-status="{{ p.status | downcase }}">{{ p.status }}</li>{% endif %}
+          {% if p.affiliation %}<li class="tag tag-affiliation" data-affiliation="{{ p.affiliation | downcase }}">{{ p.affiliation }}</li>{% endif %}
         </ul>
       </a>
     </li>

@@ -15,7 +15,8 @@
     org: document.getElementById("f-org"),
     status: document.getElementById("f-status"),
     type: document.getElementById("f-type"),
-    resource: document.getElementById("f-resource")
+    resource: document.getElementById("f-resource"),
+    external: document.getElementById("f-external")
   };
 
   // Populate each dropdown with the distinct values present in the data,
@@ -58,7 +59,8 @@
       org: selects.org.value,
       status: selects.status.value,
       type: selects.type.value,
-      resource: selects.resource.value
+      resource: selects.resource.value,
+      external: selects.external.value
     };
     var active = term || wants.org || wants.status || wants.type || wants.resource;
     var visible = 0;
@@ -97,7 +99,7 @@
   function hydrateFromUrl() {
     var params = new URLSearchParams(location.search);
     if (params.get("q")) q.value = params.get("q");
-    ["org", "status", "type", "resource"].forEach(function (k) {
+    ["org", "status", "type", "resource", "external"].forEach(function (k) {
       var v = params.get(k);
       if (v && selects[k]) selects[k].value = v.toLowerCase();
     });

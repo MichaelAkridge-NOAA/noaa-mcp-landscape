@@ -2,6 +2,7 @@
 # id / URL: /project/cefi-mcp-pilot/
 name: CEFI MCP Pilot
 organization: NOAA Changing Ecosystems and Fisheries Initiative (CEFI) — Regional Ocean Modeling / NOAA GFDL
+affiliation: NOAA       # NOAA | External
 poc:
   name: Andrew Ross
   role: NOAA CEFI Regional Ocean Modeling / GFDL

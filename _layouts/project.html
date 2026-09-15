@@ -24,6 +24,7 @@ layout: default
       {% if page.mcp_type %}<li class="tag tag-type">{{ page.mcp_type }}</li>{% endif %}
       {% if page.resource %}<li class="tag tag-resource">{{ page.resource }}</li>{% endif %}
       {% if page.status %}<li class="tag tag-status" data-status="{{ page.status | downcase }}">{{ page.status }}</li>{% endif %}
+      {% if page.affiliation %}<li class="tag tag-affiliation" data-affiliation="{{ page.affiliation | downcase }}">{{ page.affiliation }}</li>{% endif %}
     </ul>
   </header>
 
@@ -83,6 +84,7 @@ layout: default
   <dl class="record-meta">
     {% if page.last_verified %}<div><dt>Last verified</dt><dd>{{ page.last_verified }}</dd></div>{% endif %}
     {% if page.organization %}<div><dt>Organization</dt><dd>{{ page.organization }}</dd></div>{% endif %}
+    {% if page.affiliation %}<div><dt>Affiliation</dt><dd>{{ page.affiliation }}</dd></div>{% endif %}
     {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
   </dl>
 </article>

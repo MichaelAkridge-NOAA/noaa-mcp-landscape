@@ -1,10 +1,11 @@
 ---
 # id / URL: /project/ocean-mcp/
 name: OceanMCP
-organization: NOAA's National Ocean Service
+organization: oceanmodeling open-source project (external)
+affiliation: External       # NOAA | External
 poc:
   name: Mansur Ali Jisan
-  role: Physical Scientist
+  role: oceanmodeling project
 summary: >-
   A collection of independently installable MCP servers for coastal and
   oceanographic data and modeling workflows, many focused on NOAA operational
@@ -44,5 +45,5 @@ evidence:
   - label: "Repository"
     url: https://github.com/oceanmodeling/ocean-mcp
 
-last_verified: 2026-09-15
+last_verified: 2026-09-11
 ---

@@ -2,6 +2,7 @@
 # id / URL: /project/perigee-tides/
 name: NOAA Tides & Currents MCP Server (Perigee-Tides)
 organization: Cardin Labs / Ryan Cardin (external); uses NOAA CO-OPS and NWS data
+affiliation: External       # NOAA | External
 poc:
   name: Ryan Cardin
   role: Cardin Labs

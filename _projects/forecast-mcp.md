@@ -2,6 +2,7 @@
 # id / URL: /project/forecast-mcp/
 name: Forecast MCP
 organization: NOAA / Office of Marine and Aviation Operations (OMAO), Lapenta Internship Program
+affiliation: NOAA       # NOAA | External
 poc:
   name: Nikhil Manakkal
   role: 2026 OMD Lapenta Intern

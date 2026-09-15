@@ -72,5 +72,9 @@ bundle exec jekyll serve
 
 ## Notes
 
+- The four seed entries include two **illustrative samples** (`ncei-archive-mcp`,
+  `forecast-workflow-copilot`) so filters have range — delete them before launch.
+- Placeholder evidence links (`https://example.org/REPLACE-ME`) mark spots that
+  need real URLs.
 - Entries are contributed and not independently verified; each record's evidence
   links and `last_verified` date are the measure of currency.

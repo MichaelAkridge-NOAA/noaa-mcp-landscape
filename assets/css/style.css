@@ -284,6 +284,8 @@ a:hover { color: var(--ocean-deep); }
   white-space: nowrap;
 }
 .tag-type { color: var(--ocean-deep); border-color: #bcd3da; }
+.tag-affiliation { color: var(--ink); border-color: var(--hair); }
+.tag-affiliation[data-affiliation="external"] { color: var(--signal); border-color: #e6c3a3; }
 .tag-status {
   display: inline-flex;
   align-items: center;

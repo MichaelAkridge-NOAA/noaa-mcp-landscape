@@ -2,6 +2,7 @@
 # id / URL: /project/mcp-showcase-demo/
 name: MCP Showcase Demo
 organization: JoshuaLee-NOAA GitHub account (NOAA-associated developer)
+affiliation: NOAA       # NOAA | External
 poc:
   name: Joshua Lee
   role: "GitHub: JoshuaLee-NOAA"

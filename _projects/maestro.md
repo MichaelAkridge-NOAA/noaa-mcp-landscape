@@ -2,6 +2,7 @@
 # id / URL: /project/maestro/
 name: MAESTRO — Metadata Assistant for Expedited Streamlined Traceable Research Orchestration
 organization: NMFS / Pacific Islands Fisheries Science Center (PIFSC) / Ecosystem Sciences Division (ESD); associated with CIMAR/NOAA
+affiliation: NOAA       # NOAA | External
 poc:
   name: PIFSC ESD Data Services team
   email: michael.akridge@noaa.gov

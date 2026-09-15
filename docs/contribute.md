@@ -42,6 +42,7 @@ words separated by hyphens, and keep it stable once merged so links don't break.
 |---|---|---|
 | `name` | yes | Display name of the project. |
 | `organization` | yes | Owning org(s), e.g. `NOAA / Noblis`. Used as a filter. |
+| `affiliation` | yes | `NOAA` or `External` — whether the effort is internal to NOAA or a third party. Used as a filter. |
 | `poc` | recommended | Point of contact: `{ name, role, email }`. Shown on the entry page. |
 | `summary` | yes | One sentence for the registry card. |
 | `status` | yes | One of the status values below. |
@@ -72,6 +73,11 @@ servers. Use `both` only when one project genuinely does each.)
 **resource** — `data access` · `knowledge management` · `tooling` · `workflow` ·
 `modeling` · `other`
 
+**affiliation** — `NOAA` · `External`
+(Use `NOAA` for efforts run by NOAA offices, labs, programs, or NOAA-funded
+contractors and cooperative institutes acting on NOAA's behalf. Use `External`
+for independent third-party projects, even when they build on NOAA data.)
+
 See [Terminology](../terminology/) for definitions.
 
 ## Template
@@ -82,6 +88,7 @@ Copy this into `_projects/<id>.md`, keeping the `---` lines:
 ---
 name: Example MCP Project
 organization: NOAA / Partner
+affiliation: NOAA        # NOAA | External
 poc:
   name: Jane Doe
   role: Maintainer

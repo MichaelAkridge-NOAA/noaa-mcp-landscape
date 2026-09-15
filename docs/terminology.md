@@ -44,6 +44,17 @@ The primary kind of thing an entry is about.
 - **modeling** — Model configuration, runs, or output interpretation.
 - **other** — Anything that doesn't fit; propose a new value if it recurs.
 
+## Affiliation
+
+Whether the effort is internal to NOAA or comes from outside it. Shown on the
+front page as the **Internal/External** filter.
+
+- **NOAA** — Run by a NOAA office, lab, or program, or by NOAA-funded
+  contractors and cooperative institutes acting on NOAA's behalf.
+- **External** — An independent third-party project, even when it builds on or
+  exposes NOAA data. External entries are not NOAA services and carry no NOAA
+  endorsement.
+
 ## Record fields
 
 - **overview** — What the effort is and why it exists.

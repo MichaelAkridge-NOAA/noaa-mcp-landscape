@@ -12,6 +12,7 @@
 # Full field reference: /docs/contribute/
 name: Example MCP Project
 organization: NOAA / Partner
+affiliation: NOAA        # NOAA | External
 poc:
   name: Jane Doe
   role: Maintainer

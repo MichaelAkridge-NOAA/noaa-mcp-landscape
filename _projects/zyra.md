@@ -2,6 +2,7 @@
 # id / URL: /project/zyra/
 name: Zyra
 organization: NOAA Global Systems Laboratory (GSL)
+affiliation: NOAA       # NOAA | External
 poc:
   name: Eric Hackathorn
   role: NOAA Global Systems Laboratory

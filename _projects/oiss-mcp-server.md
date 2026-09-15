@@ -3,6 +3,7 @@
 # This supersedes the placeholder entry oiss-knowledge-mesh — delete that file.
 name: OISS MCP Server
 organization: Noblis / NOAA NESDIS
+affiliation: NOAA       # NOAA | External
 poc:
   name: Achuna Ofonedu, Amogha Sinha, Dawson Miller
   role: Noblis
