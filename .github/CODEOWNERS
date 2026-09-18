@@ -1,0 +1,12 @@
+# Catalogue maintainers.
+# With branch protection on `main`, every pull request must be approved by a
+# code owner listed here before it can be merged — so no entry is published
+# without a maintainer's review.
+#
+# Personal repo (now): list individual GitHub usernames (each needs write access).
+# When this moves to the NOAA-OAR-WPO-SDII org, swap the username for a team
+# handle, e.g.:  *   @NOAA-OAR-WPO-SDII/catalogue-maintainers
+#
+# `*` means all files, so every change requires review.
+
+*   @jmote-noaa
