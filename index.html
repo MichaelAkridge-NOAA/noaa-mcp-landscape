@@ -8,6 +8,22 @@ title: null
   <p class="hero-lede">{{ site.tagline }}</p>
 </section>
 
+<section class="explainer wrap" aria-label="What are MCP servers?">
+  <h2>What are MCP servers?</h2>
+  <p>
+    The Model Context Protocol (MCP) is an open standard that lets AI assistants
+    connect to outside tools and data through one common interface. An MCP
+    <em>server</em> is a small program that exposes a specific resource — a
+    dataset, an API, a document collection — so that any MCP-compatible assistant
+    can discover and use it without a custom, one-off integration. In practice
+    that means an assistant can pull a live forecast, search a catalog, or run an
+    analysis by calling a server, rather than someone wiring each system together
+    by hand. This registry maps where NOAA and its partners are building and
+    experimenting with those servers.
+    <a href="https://www.anthropic.com/news/model-context-protocol">Learn more about MCP&nbsp;&rarr;</a>
+  </p>
+</section>
+
 <section class="controls wrap" aria-label="Search and filter the registry">
   <div class="search">
     <label class="visually-hidden" for="q">Search entries</label>
@@ -31,7 +47,7 @@ title: null
       <select id="f-resource" data-key="resource"><option value="">All</option></select>
     </label>
     <label class="filter">
-      <span>Internal/External</span>
+      <span>Affiliation</span>
       <select id="f-external" data-key="external"><option value="">All</option></select>
     </label>
     <button id="reset" type="button" class="reset" hidden>Clear filters</button>

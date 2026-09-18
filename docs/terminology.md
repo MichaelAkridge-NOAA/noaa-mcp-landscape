@@ -47,7 +47,7 @@ The primary kind of thing an entry is about.
 ## Affiliation
 
 Whether the effort is internal to NOAA or comes from outside it. Shown on the
-front page as the **Internal/External** filter.
+front page as the **Affiliation** filter.
 
 - **NOAA** — Run by a NOAA office, lab, or program, or by NOAA-funded
   contractors and cooperative institutes acting on NOAA's behalf.
